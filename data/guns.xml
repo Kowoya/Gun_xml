@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gun xmlns="http://www.knu.ua/gun"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.knu.ua/gun gun.xsd">
+
+    <firearm id="g1" handy="one-handed">
+        <model>Fort-12</model>
+        <origin>Ukraine</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+
+    <firearm id="g2" handy="two-handed">
+        <model>M4A1</model>
+        <origin>USA</origin>
+        <ttc>
+            <firing-range>medium</firing-range>
+            <sighting-range>600</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>aluminum</material>
+    </firearm>
+
+    <firearm id="g3" handy="one-handed">
+        <model>Glock 17</model>
+        <origin>Austria</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+
+    <firearm id="g4" handy="two-handed">
+        <model>Barrett M82A1</model>
+        <origin>USA</origin>
+        <ttc>
+            <firing-range>far</firing-range>
+            <sighting-range>1800</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+
+    <firearm id="g5" handy="two-handed">
+        <model>Malyuk</model>
+        <origin>Ukraine</origin>
+        <ttc>
+            <firing-range>medium</firing-range>
+            <sighting-range>500</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+
+    <firearm id="g6" handy="two-handed">
+        <model>FN SCAR-L</model>
+        <origin>Belgium</origin>
+        <ttc>
+            <firing-range>medium</firing-range>
+            <sighting-range>600</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>aluminum</material>
+    </firearm>
+
+    <firearm id="g7" handy="one-handed">
+        <model>Walther P99</model>
+        <origin>Germany</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+
+    <firearm id="g8" handy="two-handed">
+        <model>HK G36</model>
+        <origin>Germany</origin>
+        <ttc>
+            <firing-range>medium</firing-range>
+            <sighting-range>800</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+
+    <firearm id="g9" handy="two-handed">
+        <model>Tavor X95</model>
+        <origin>Israel</origin>
+        <ttc>
+            <firing-range>medium</firing-range>
+            <sighting-range>500</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+
+    <firearm id="g10" handy="one-handed">
+        <model>FN Five-seveN</model>
+        <origin>Belgium</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+
+    <firearm id="g11" handy="two-handed">
+        <model>Z-008</model>
+        <origin>Ukraine</origin>
+        <ttc>
+            <firing-range>far</firing-range>
+            <sighting-range>1200</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+
+    <firearm id="g12" handy="two-handed">
+        <model>Mossberg 500</model>
+        <origin>USA</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>40</sighting-range>
+            <clip>false</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>wood</material>
+    </firearm>
+
+    <firearm id="g13" handy="two-handed">
+        <model>Beretta ARX160</model>
+        <origin>Italy</origin>
+        <ttc>
+            <firing-range>medium</firing-range>
+            <sighting-range>600</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>polymer</material>
+    </firearm>
+</Gun>

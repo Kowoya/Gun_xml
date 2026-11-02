@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Parser robustness: comment, CDATA, unknown element, xs:boolean written as 1/0 -->
+<Gun xmlns="http://www.knu.ua/gun">
+    <firearm id="g7" handy="one-handed">
+        <model><![CDATA[Fort-17]]></model>
+        <origin>Ukraine</origin>
+        <note>this element is not in the schema and must be skipped</note>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>25</sighting-range>
+            <clip>1</clip>
+            <optics>0</optics>
+        </ttc>
+        <material>titanium</material>
+    </firearm>
+</Gun>

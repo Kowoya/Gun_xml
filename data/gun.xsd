@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Schema for a catalogue of firearms.
+    Root element: Gun. Each child element "firearm" describes one weapon.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:g="http://www.knu.ua/gun"
+           targetNamespace="http://www.knu.ua/gun"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <!-- ===================== Root element ===================== -->
+    <xs:element name="Gun" type="g:GunType"/>
+
+    <xs:complexType name="GunType">
+        <xs:sequence>
+            <xs:element name="firearm" type="g:FirearmType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ===================== Complex types ===================== -->
+    <xs:complexType name="FirearmType">
+        <xs:sequence>
+            <xs:element name="model" type="g:ModelType"/>
+            <xs:element name="origin" type="g:OriginType"/>
+            <xs:element name="ttc" type="g:TtcType"/>
+            <xs:element name="material" type="g:MaterialType"/>
+        </xs:sequence>
+        <!-- Required attributes; id is of type ID, so it must be unique in the document -->
+        <xs:attribute name="id" type="g:FirearmIdType" use="required"/>
+        <xs:attribute name="handy" type="g:HandyType" use="required"/>
+    </xs:complexType>
+
+    <!-- Tactical and technical characteristics -->
+    <xs:complexType name="TtcType">
+        <xs:sequence>
+            <xs:element name="firing-range" type="g:FiringRangeType"/>
+            <xs:element name="sighting-range" type="g:SightingRangeType"/>
+            <xs:element name="clip" type="xs:boolean"/>
+            <xs:element name="optics" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ===================== Simple types ===================== -->
+
+    <!-- ID values must be NCName: letter "g" followed by a number, e.g. g1, g12 -->
+    <xs:simpleType name="FirearmIdType">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="g[1-9][0-9]{0,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ModelType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="40"/>
+            <xs:pattern value="[A-Za-z0-9А-Яа-яІіЇїЄєҐґ][A-Za-z0-9А-Яа-яІіЇїЄєҐґ \-\.]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="HandyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="one-handed"/>
+            <xs:enumeration value="two-handed"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="OriginType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ukraine"/>
+            <xs:enumeration value="USA"/>
+            <xs:enumeration value="Germany"/>
+            <xs:enumeration value="Belgium"/>
+            <xs:enumeration value="Austria"/>
+            <xs:enumeration value="Israel"/>
+            <xs:enumeration value="Italy"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- close: [0 - 500) m, medium: [500 - 1000) m, far: [1000 - n) m -->
+    <xs:simpleType name="FiringRangeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="close"/>
+            <xs:enumeration value="medium"/>
+            <xs:enumeration value="far"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Sighting range in metres, with boundary values -->
+    <xs:simpleType name="SightingRangeType">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minInclusive value="10"/>
+            <xs:maxInclusive value="3000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MaterialType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="steel"/>
+            <xs:enumeration value="aluminum"/>
+            <xs:enumeration value="polymer"/>
+            <xs:enumeration value="wood"/>
+            <xs:enumeration value="titanium"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

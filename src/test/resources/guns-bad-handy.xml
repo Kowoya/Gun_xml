@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gun xmlns="http://www.knu.ua/gun">
+    <firearm id="g1" handy="three-handed">
+        <model>Strange</model>
+        <origin>USA</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+</Gun>

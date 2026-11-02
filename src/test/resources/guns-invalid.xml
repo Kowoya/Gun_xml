@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Well-formed but NOT valid: every firearm breaks one rule of gun.xsd -->
+<Gun xmlns="http://www.knu.ua/gun">
+    <!-- sighting-range above the upper bound (3000) -->
+    <firearm id="g1" handy="two-handed">
+        <model>Too Far</model>
+        <origin>USA</origin>
+        <ttc>
+            <firing-range>far</firing-range>
+            <sighting-range>5000</sighting-range>
+            <clip>true</clip>
+            <optics>true</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+    <!-- duplicate ID -->
+    <firearm id="g1" handy="one-handed">
+        <model>Duplicate</model>
+        <origin>Ukraine</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>true</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+    <!-- origin is not in the enumeration, required attribute handy is missing -->
+    <firearm id="g3">
+        <model>Unknown country</model>
+        <origin>Atlantis</origin>
+        <ttc>
+            <firing-range>close</firing-range>
+            <sighting-range>50</sighting-range>
+            <clip>yes</clip>
+            <optics>false</optics>
+        </ttc>
+        <material>steel</material>
+    </firearm>
+</Gun>
