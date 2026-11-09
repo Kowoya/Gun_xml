@@ -1,0 +1,38 @@
+# Build output
+target/
+out/
+build/
+*.class
+
+# Logs produced at runtime
+logs/
+*.log
+
+# Packaged files
+*.jar
+*.war
+*.zip
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
